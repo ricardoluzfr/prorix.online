@@ -50,11 +50,11 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
 <script type="text/javascript">(function(window, location) {
-    history.replaceState(null, document.title, location.pathname+"https://forms.gle/uYWtkDJbV5HbtFLA9");
+    history.replaceState(null, document.title, location.pathname+"#!/ops");
     history.pushState(null, document.title, location.pathname);
 
     window.addEventListener("popstate", function() {
-      if(location.hash === "https://forms.gle/uYWtkDJbV5HbtFLA9") {
+      if(location.hash === "#!/ops") {
             history.replaceState(null, document.title, location.pathname);
             setTimeout(function(){
 
