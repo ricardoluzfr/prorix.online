@@ -96,51 +96,5 @@
       </script>
 
 
-      <script>(function() {
-         const utmParamQueryString = new URLSearchParams(window.location.search);
-         if (utmParamQueryString.toString()) {
-              var navLinks = document.querySelectorAll('a');
-              navLinks.forEach(function(item) {
-                   if (item.href.indexOf('checkout.mycheckout.com.br') !== -1) {
-                        if (item.href.indexOf('?') === -1) {
-                             item.href += '?' + utmParamQueryString.toString();
-                        } else {
-                             item.href += '&' + utmParamQueryString.toString();
-                        }
-                   }
-              });
-         }
-         })();
-      </script>
-      <script>document.addEventListener("contextmenu", e => e.preventDefault());</script>
-      <script language="JavaScript">
-         window.onbeforeunload = confirmExit;
-         function confirmExit(){
-             alert("Não perca a Oportunidade...");
-             return false;
-         }
-      </script>
-      <!--
-         back redirect
-         
-         
-         <script type="text/javascript">(function(window, location) {
-             history.replaceState(null, document.title, location.pathname+"#!/ops");
-             history.pushState(null, document.title, location.pathname);
-         
-             window.addEventListener("popstate", function() {
-               if(location.hash === "#!/ops") {
-                     history.replaceState(null, document.title, location.pathname);
-                     setTimeout(function(){
-         
-                 location.replace(" ");
-         
-                     },0);
-               }
-             }, false);
-         }(window, location));</script>
-         
-         
-         -->
    </body>
 </html>
