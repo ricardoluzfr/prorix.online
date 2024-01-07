@@ -1,1 +1,136 @@
-teste
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Responsiva</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+              background: linear-gradient(-45deg, #f06, #9f6) fixed;
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+            color: #fff;
+        }
+
+          @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+          #video-container {
+            text-align: center;
+        }
+        iframe {
+            width: 100%;
+            height: 400px;
+        }
+   /* Estilos para os botões */
+        .button-container {
+            text-align: center;
+        }
+
+        .custom-button {
+            display: none;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            /*animation: pulse 2s infinite;
+            animation-delay: 1s;*/
+            margin: 10px auto;
+            display: block;
+        }
+
+        /* Estilos para o texto */
+        .custom-button span {
+            display: block;
+            line-height: 1;
+        }
+         .hidden {
+            display: none;
+        }
+
+        /* Animação de pulsação 
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }*/
+        .comments {
+            margin-top: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Título da Página</h1>
+        <center><p>Subtítulo ou descrição da página.</p></center>
+        
+        <div id="video-container">
+            <script src="https://fast.wistia.com/embed/medias/zgflzr6rls.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_zgflzr6rls seo=true videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/zgflzr6rls/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+        </div>
+
+   <div class="button-container">
+        <a href="#" class="custom-button hidden" id="botao1">
+            <span>Primeira Linha</span>
+            <span>Segunda Linha</span>
+        </a>
+        <a href="#" class="custom-button hidden" id="botao2">
+            <span>Texto 1</span>
+            <span>Texto 2</span>
+        </a>
+    </div>
+
+       <script>
+        window._wq = window._wq || [];
+        _wq.push({ id: 'zgflzr6rls', onReady: function(video) {
+            video.bind('secondchange', function(s) {
+                if (s >= 1) {
+                    document.getElementById('botao1').classList.remove('hidden');
+                    document.getElementById('botao2').classList.remove('hidden');
+                }
+            });
+        }});
+    </script>
+
+        <div class="comments">
+            <h2>Comentários</h2>
+            <p>Aqui podem ser exibidos os comentários dos usuários.</p>
+        </div>
+    </div>
+</body>
+</html>
